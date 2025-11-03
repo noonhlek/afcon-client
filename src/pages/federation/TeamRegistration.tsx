@@ -18,35 +18,35 @@ const SOUTH_AFRICAN_SQUAD = {
   manager: "Hugo Broos",
   players: [
     // Goalkeepers
-    { name: "Ronwen Williams", position: "GK" as const, number: 1 },
-    { name: "Veli Mothwa", position: "GK" as const, number: 16 },
-    { name: "Ricardo Goss", position: "GK" as const, number: 22 },
-    
+    { name: "R. Williams", position: "GK" as const, number: 1 },
+    { name: "V. Mothwa", position: "GK" as const, number: 16 },
+    { name: "R. Goss", position: "GK" as const, number: 22 },
+
     // Defenders
-    { name: "Nyiko Mobbie", position: "DF" as const, number: 2 },
-    { name: "Khuliso Mudau", position: "DF" as const, number: 3 },
-    { name: "Aubrey Modiba", position: "DF" as const, number: 4 },
-    { name: "Mothobi Mvala", position: "DF" as const, number: 5 },
-    { name: "Grant Kekana", position: "DF" as const, number: 6 },
-    { name: "Nkosinathi Sibisi", position: "DF" as const, number: 14 },
-    { name: "Siyanda Xulu", position: "DF" as const, number: 18 },
-    { name: "Innocent Maela", position: "DF" as const, number: 20 },
-    
+    { name: "N. Mobbie", position: "DF" as const, number: 2 },
+    { name: "K. Mudau", position: "DF" as const, number: 3 },
+    { name: "A. Modiba", position: "DF" as const, number: 4 },
+    { name: "M. Mvala", position: "DF" as const, number: 5 },
+    { name: "G. Kekana", position: "DF" as const, number: 6 },
+    { name: "N. Sibisi", position: "DF" as const, number: 14 },
+    { name: "S. Xulu", position: "DF" as const, number: 18 },
+    { name: "I. Maela", position: "DF" as const, number: 20 },
+
     // Midfielders
-    { name: "Teboho Mokoena", position: "MF" as const, number: 8 },
-    { name: "Sphephelo Sithole", position: "MF" as const, number: 12 },
-    { name: "Jayden Adams", position: "MF" as const, number: 13 },
-    { name: "Thabang Monare", position: "MF" as const, number: 15 },
-    { name: "Thapelo Maseko", position: "MF" as const, number: 17 },
-    { name: "Patrick Maswanganyi", position: "MF" as const, number: 23 },
-    
+    { name: "T. Mokoena", position: "MF" as const, number: 8 },
+    { name: "S. Sithole", position: "MF" as const, number: 12 },
+    { name: "J. Adams", position: "MF" as const, number: 13 },
+    { name: "T. Monare", position: "MF" as const, number: 15 },
+    { name: "T. Maseko", position: "MF" as const, number: 17 },
+    { name: "P. Maswanganyi", position: "MF" as const, number: 23 },
+
     // Forwards
-    { name: "Percy Tau", position: "FW" as const, number: 7 },
-    { name: "Evidence Makgopa", position: "FW" as const, number: 9 },
-    { name: "Zakhele Lepasa", position: "FW" as const, number: 10 },
-    { name: "Mihlali Mayambela", position: "FW" as const, number: 11 },
-    { name: "Oswin Appollis", position: "FW" as const, number: 19 },
-    { name: "Lyle Foster", position: "FW" as const, number: 21 }
+    { name: "P. Tau", position: "FW" as const, number: 7 },
+    { name: "E. Makgopa", position: "FW" as const, number: 9 },
+    { name: "Z. Lepasa", position: "FW" as const, number: 10 },
+    { name: "M. Mayambela", position: "FW" as const, number: 11 },
+    { name: "O. Appollis", position: "FW" as const, number: 19 },
+    { name: "L. Foster", position: "FW" as const, number: 21 }
   ]
 };
 
