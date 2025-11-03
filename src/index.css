@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F5F5F5;
+    --bg-tertiary: #E0E0E0;
+    --text-primary: #000000;
+    --text-secondary: #404040;
+    --text-tertiary: #808080;
+    --border: #000000;
+    --accent: #000000;
+    --accent-hover: #404040;
+  }
+
+  .dark {
+    --bg-primary: #000000;
+    --bg-secondary: #1A1A1A;
+    --bg-tertiary: #2A2A2A;
+    --text-primary: #FFFFFF;
+    --text-secondary: #CCCCCC;
+    --text-tertiary: #808080;
+    --border: #FFFFFF;
+    --accent: #FFFFFF;
+    --accent-hover: #CCCCCC;
+  }
+
+  * {
+    border-radius: 0 !important;
+    font-family: 'Poppins', sans-serif !important;
+  }
+
+  body {
+    @apply bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased;
+    font-family: 'Courier New', monospace;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+    line-height: 1.2;
+  }
+
+  h1 {
+    @apply text-xl;
+  }
+
+  h2 {
+    @apply text-lg;
+  }
+
+  h3 {
+    @apply text-sm;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-1 border-2 border-[var(--border)] bg-[var(--bg-primary)] text-[var(--text-primary)] font-bold uppercase tracking-wider transition-colors;
+  }
+
+  .btn:hover {
+    @apply bg-[var(--text-primary)] text-[var(--bg-primary)];
+  }
+
+  .btn-primary {
+    @apply bg-[var(--text-primary)] text-[var(--bg-primary)];
+  }
+
+  .btn-primary:hover {
+    @apply bg-[var(--text-secondary)];
+  }
+
+  .input {
+    @apply w-full px-4 py-3 border-2 border-[var(--border)] bg-[var(--bg-primary)] text-[var(--text-primary)] font-mono focus:outline-none focus:border-[var(--text-secondary)];
+  }
+
+  .card {
+    @apply border-2 border-[var(--border)] bg-[var(--bg-primary)] p-6;
+  }
+
+  .table-brutalist {
+    @apply w-full border-2 border-[var(--border)];
+  }
+
+  .table-brutalist th {
+    @apply border-b-2 border-[var(--border)] p-4 text-left font-bold uppercase tracking-wider bg-[var(--bg-secondary)];
+  }
+
+  .table-brutalist td {
+    @apply border-b border-[var(--border)] p-4;
+  }
+
+  .table-brutalist tr:last-child td {
+    @apply border-b-0;
+  }
+
+  .divider {
+    @apply h-0.5 bg-[var(--border)] my-8;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
