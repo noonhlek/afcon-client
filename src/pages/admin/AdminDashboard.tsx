@@ -19,11 +19,10 @@ export const AdminDashboard = () => {
     loadDashboardData();
   }, []);
 
-  // TypeScript support - these are now properly typed
-  const teamCount = dashboardData?.teams.length; // number | undefined
-  const tournamentStatus = dashboardData?.tournament?.status; // 'registration' | 'active' | 'completed' | undefined
-  const currentRound = dashboardData?.tournament?.currentRound; // 'quarter_finals' | 'semi_finals' | 'final' | null | undefined
-  const matchesCount = dashboardData?.matches.length; // number | undefined
+  const teamCount = dashboardData?.teams.length; 
+  const tournamentStatus = dashboardData?.tournament?.status; 
+  const currentRound = dashboardData?.tournament?.currentRound; 
+  const matchesCount = dashboardData?.matches.length;
 
   const handleStartTournament = async () => {
     if (teamCount && teamCount < 8) {
@@ -112,7 +111,7 @@ export const AdminDashboard = () => {
         <div className="card mb-8">
           <h3 className="mb-4">TOURNAMENT CONTROLS</h3>
 
-          <div className="flex gap-4">
+          {teamCount == 8 && (<div className="flex gap-4">
             {(!tournament || tournament.status === 'registration') && (
               <button
                 onClick={handleStartTournament}
@@ -141,7 +140,7 @@ export const AdminDashboard = () => {
                 {actionLoading ? 'RESETTING...' : 'RESET TOURNAMENT'}
               </button>
             )}
-          </div>
+          </div>)}
 
           {(teamCount || 0) < 8 && (
             <div className="mt-4 p-4 border-2 border-yellow-600 bg-yellow-50 dark:bg-yellow-950">
