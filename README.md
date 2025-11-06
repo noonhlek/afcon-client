@@ -175,6 +175,7 @@ graph LR;
   B -- "OTP requests / verify" --> API;
   API --> DB;
   API --> SMS;
+```
 
 ASCII fallback:
 - Browser (React + Vite)
