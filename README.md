@@ -150,6 +150,7 @@ All protected endpoints should accept Authorization: Bearer <token>.
 ## System architecture diagram
 
 Mermaid (render if supported):
+...existing code...
 ```mermaid
 graph LR;
   Browser["Browser (React + Vite)"];
@@ -170,11 +171,10 @@ graph LR;
   A --> C;
   C --> D;
   D --> H;
-  H -->|HTTP (Bearer token)| API;
-  B -->|OTP requests / verify| API;
+  H -- "HTTP (Bearer token)" --> API;
+  B -- "OTP requests / verify" --> API;
   API --> DB;
   API --> SMS;
-```
 
 ASCII fallback:
 - Browser (React + Vite)
