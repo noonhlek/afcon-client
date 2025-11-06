@@ -150,7 +150,7 @@ All protected endpoints should accept Authorization: Bearer <token>.
 ## System architecture diagram
 
 Mermaid (render if supported):
-...existing code...
+
 ```mermaid
 graph LR;
   Browser["Browser (React + Vite)"];
