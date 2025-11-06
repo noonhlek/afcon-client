@@ -151,31 +151,29 @@ All protected endpoints should accept Authorization: Bearer <token>.
 
 Mermaid (render if supported):
 ```mermaid
-flowchart LR
-  Browser["Browser (React + Vite)"]
-  subgraph Client
-    A["main.tsx\n(Providers: MernAccess, Theme)"]
-    B["Auth UI\n(Login / Signup / Verify)"]
-    C["Routing\n(App.tsx + ProtectedRoute)"]
-    D["Pages\n(Bracket / Admin / Federation)"]
-    H["Hooks\nuseAdmin / useFederation / useTheme"]
-  end
-
-  subgraph Backend
-    API["API (VITE_AUTHAPI_URL)\n/auth /admin /fed /match"]
-    DB["Database\n(users, teams, matches)"]
-    SMS["SMS / Email Provider (optional)"]
-  end
-
-  Browser --> A
-  A --> B
-  A --> C
-  C --> D
-  D --> H
-  H -->|HTTP (Bearer token)| API
-  B -->|OTP requests / verify| API
-  API --> DB
-  API --> SMS
+graph LR;
+  Browser["Browser (React + Vite)"];
+  subgraph Client;
+    A["main.tsx\n(Providers: MernAccess, Theme)"];
+    B["Auth UI\n(Login / Signup / Verify)"];
+    C["Routing\n(App.tsx + ProtectedRoute)"];
+    D["Pages\n(Bracket / Admin / Federation)"];
+    H["Hooks\nuseAdmin / useFederation / useTheme"];
+  end;
+  subgraph Backend;
+    API["API (VITE_AUTHAPI_URL)\n/auth /admin /fed /match"];
+    DB["Database\n(users, teams, matches)"];
+    SMS["SMS / Email Provider (optional)"];
+  end;
+  Browser --> A;
+  A --> B;
+  A --> C;
+  C --> D;
+  D --> H;
+  H -->|HTTP (Bearer token)| API;
+  B -->|OTP requests / verify| API;
+  API --> DB;
+  API --> SMS;
 ```
 
 ASCII fallback:
