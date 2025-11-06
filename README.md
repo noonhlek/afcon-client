@@ -151,20 +151,20 @@ All protected endpoints should accept Authorization: Bearer <token>.
 
 Mermaid (render if supported):
 ```mermaid
-graph LR
+flowchart LR
   Browser["Browser (React + Vite)"]
   subgraph Client
-    A[main.tsx - Providers]
-    B[Auth UI: Login/Signup/Verify]
-    C[Routing: App.tsx + ProtectedRoute]
-    D[Pages: Bracket / Admin / Federation]
-    H[Hooks: useAdmin / useFederation / useTheme]
+    A["main.tsx\n(Providers: MernAccess, Theme)"]
+    B["Auth UI\n(Login / Signup / Verify)"]
+    C["Routing\n(App.tsx + ProtectedRoute)"]
+    D["Pages\n(Bracket / Admin / Federation)"]
+    H["Hooks\nuseAdmin / useFederation / useTheme"]
   end
 
   subgraph Backend
     API["API (VITE_AUTHAPI_URL)\n/auth /admin /fed /match"]
-    DB[(Database: users, teams, matches)]
-    Provider["SMS / Email Provider (optional)"]
+    DB["Database\n(users, teams, matches)"]
+    SMS["SMS / Email Provider (optional)"]
   end
 
   Browser --> A
@@ -175,7 +175,7 @@ graph LR
   H -->|HTTP (Bearer token)| API
   B -->|OTP requests / verify| API
   API --> DB
-  API --> Provider
+  API --> SMS
 ```
 
 ASCII fallback:
